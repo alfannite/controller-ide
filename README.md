@@ -10,7 +10,7 @@ Full Docs and Project Source code open source.
 
 <p align="center">
 
-![Platform](https://img.shields.io/badge/Platform-Proxmox-orange) << EXAMPLE
+MASIH KOSONG SEMUA SOON BAKAL DI BENERIN
 
 
 </p>
