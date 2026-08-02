@@ -215,13 +215,3 @@ Contoh payload JSON:
 | Board tidak terdeteksi saat upload | Cek driver USB-to-Serial (CP2102/CH340), tekan tombol BOOT      |
 
 ---
-
-## 🤝 Kontribusi
-
-Kontribusi sangat terbuka! Silakan buat *pull request* atau buka *issue* untuk melaporkan bug maupun mengusulkan fitur baru.
-
----
-
-## 📄 Lisensi
-
-Proyek ini dirilis di bawah lisensi **MIT** — bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan atribusi.
