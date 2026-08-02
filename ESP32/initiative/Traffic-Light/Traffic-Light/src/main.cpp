@@ -25,7 +25,7 @@ void loop()
 
     Serial.println("RED");
 
-    delay(2000);
+    delay(5000);
 
     // =====================
     // YELLOW
@@ -49,5 +49,5 @@ void loop()
 
     Serial.println("GREEN");
 
-    delay(2000);
+    delay(5000);
 }
