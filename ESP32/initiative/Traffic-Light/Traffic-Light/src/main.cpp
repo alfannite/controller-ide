@@ -1,38 +1,53 @@
 #include <Arduino.h>
 
-void printSystemInfo() {
-    Serial.println("========================================");
-    Serial.println("        ESP32 SYSTEM INFORMATION");
-    Serial.println("========================================");
+#include "config.h"
 
-    Serial.printf("Chip Model     : %s\n", ESP.getChipModel());
-    Serial.printf("Chip Revision  : %d\n", ESP.getChipRevision());
-    Serial.printf("CPU Frequency  : %d MHz\n", ESP.getCpuFreqMHz());
-    Serial.printf("Flash Size     : %d MB\n", ESP.getFlashChipSize() / (1024 * 1024));
-    Serial.printf("Flash Speed    : %d MHz\n", ESP.getFlashChipSpeed() / 1000000);
-    Serial.printf("Free Heap      : %d Bytes\n", ESP.getFreeHeap());
-    Serial.printf("SDK Version    : %s\n", ESP.getSdkVersion());
+void setup()
+{
+    Serial.begin(SERIAL_BAUDRATE);
 
-    Serial.println("========================================");
+    pinMode(PIN_RED, OUTPUT);
+    pinMode(PIN_YELLOW, OUTPUT);
+    pinMode(PIN_GREEN, OUTPUT);
+
+    Serial.println("Traffic Light Test");
 }
 
-void setup() {
-    Serial.begin(115200);
+void loop()
+{
+    // =====================
+    // RED
+    // =====================
+
+    digitalWrite(PIN_RED, HIGH);
+    digitalWrite(PIN_YELLOW, LOW);
+    digitalWrite(PIN_GREEN, LOW);
+
+    Serial.println("RED");
+
+    delay(2000);
+
+    // =====================
+    // YELLOW
+    // =====================
+
+    digitalWrite(PIN_RED, LOW);
+    digitalWrite(PIN_YELLOW, HIGH);
+    digitalWrite(PIN_GREEN, LOW);
+
+    Serial.println("YELLOW");
+
     delay(1000);
 
-    printSystemInfo();
-}
+    // =====================
+    // GREEN
+    // =====================
 
-void loop() {
+    digitalWrite(PIN_RED, LOW);
+    digitalWrite(PIN_YELLOW, LOW);
+    digitalWrite(PIN_GREEN, HIGH);
 
-    static uint32_t counter = 1;
+    Serial.println("GREEN");
 
-    Serial.printf(
-        "[%03lu] ESP32 Running | Uptime : %lu sec | Free Heap : %d Bytes\n",
-        counter++,
-        millis() / 1000,
-        ESP.getFreeHeap()
-    );
-
-    delay(1000);
+    delay(2000);
 }
