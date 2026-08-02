@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/img/logo.png" width="120">
+</p>
+
 <h1 align="center">Controller IDE Source Code</h1>
 
 <p align="center">
