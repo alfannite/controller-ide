@@ -1,4 +1,4 @@
-<h1 align="center">🌐 ESP32 IoT Monitoring & Automation Platform</h1>
+<h1 align="center">Controller IDE Source Code</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C"/>
