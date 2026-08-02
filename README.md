@@ -234,6 +234,6 @@ Contoh payload JSON:
     <img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white"/>
   </a>
   <a href="https://discord.gg/mS4UXkQjW">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Diwwscord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
   </a>
 </div>
