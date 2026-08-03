@@ -73,19 +73,19 @@ Proyek ini merupakan bagian dari ekosistem infrastruktur self-hosted yang lebih 
 │  ESP32 Node │ ──────────────────► │  MQTT Broker │ ─────────────────────► │  Node.js API   │
 │  (C/C++)    │                     │ (Mosquitto)  │                        │   Backend      │
 └─────────────┘                     └──────────────┘                        └───────┬───────┘
-                                                                                       │
-                                                                                       ▼
-                                                                              ┌─────────────────┐
-                                                                              │      Redis       │
-                                                                              │  (cache/state)    │
-                                                                              └────────┬────────┘
-                                                                                       │
-                                                            ┌──────────────────────────┼──────────────────────────┐
-                                                            ▼                          ▼                          ▼
-                                                     ┌─────────────┐          ┌──────────────┐            ┌──────────────┐
-                                                     │  Prometheus │          │   Grafana    │            │    Nginx      │
-                                                     │  (metrics)  │          │ (dashboard)  │            │ (reverse proxy)│
-                                                     └─────────────┘          └──────────────┘            └──────────────┘
+                                                                                    │
+                                                                                    ▼
+                                                                           ┌─────────────────┐
+                                                                           │      Redis      │
+                                                                           │  (cache/state)  │
+                                                                           └────────┬────────┘
+                                                                                    │
+                                                         ┌──────────────────────────┼──────────────────────────┐
+                                                         ▼                          ▼                          ▼
+                                                    ┌─────────────┐          ┌──────────────┐            ┌──────────────┐
+                                                    │  Prometheus │          │   Grafana    │            │    Nginx     │
+                                                    │  (metrics)  │          │ (dashboard)  │            │   (proxy)    │
+                                                    └─────────────┘          └──────────────┘            └──────────────┘
 ```
 
 Seluruh traffic internal diamankan melalui **WireGuard VPN**, dengan routing dikelola oleh **MikroTik** dan **Cisco** di sisi jaringan, serta di-host di atas **Proxmox** menggunakan container **Docker**.
